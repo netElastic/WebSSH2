@@ -1,13 +1,29 @@
 # Change Log
-## [0.2.3] 2018-02-TBD
+## [0.2.5] 20180911
+### Added
+- Reauth function thanks to @vbeskrovny and @vvalchev (9bbc116)
+  - Controlled by `config.json` option `options.allowreauth` true presents reauth dialog and false hides dialog
+### Changed
+- `options.challengeButton` enabled
+  - previously this configuration option did nothing, this now enables the Credentials button site-wide regardless of the `allowreplay` header value
+- Updated debug module to v4
+
+## [0.2.4] 2018-07-18
 ### Added
 - Browser title window now changes with xterm escape sequences (see http://tldp.org/HOWTO/Xterm-Title-3.html)
 - Added bellStyle options
   - `GET var`: **bellStyle** - _string_ - Style of terminal bell: ("sound"|"none"). **Default:** "sound". **Enforced Values:** "sound", "none"
   - `config.json`: **terminal.bellStyle** - _string_ - Style of terminal bell: (sound|none). **Default:** "sound".
+  - `workspace` folder on GITHUB for BIG-IP specific fixes/changes
 ### Changed
 - Updated xterm.js to 3.1.0
   - https://github.com/xtermjs/xterm.js/releases/tag/3.1.0
+- Default listen IP in `config.json` changed back to 127.0.0.1 
+### Fixed
+- ESC]0; is now removed from log files when using the browser-side logging feature
+
+## [0.2.3] unreleased
+
 ### Fixed
 - ESC]0; is now removed from log files when using the browser-side logging feature
 
